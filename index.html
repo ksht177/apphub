@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AppHub - 软件库</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>📦 AppHub</h1>
+    <span id="count" class="count"></span>
+  </div>
+  <div class="search-box">
+    <input id="search" type="search" placeholder="搜索应用 / 作者 / 描述…" autocomplete="off">
+  </div>
+  <div id="tags" class="tags"></div>
+</header>
+<main>
+  <div id="grid" class="grid"><div class="empty">加载中…</div></div>
+</main>
+<footer>
+  <p>本页面为静态索引，软件文件由各自的 GitHub 仓库托管。下载前请自行甄别安全性。</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
