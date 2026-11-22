@@ -1,0 +1,64 @@
+name: 📱 上架申请
+description: 申请把你的软件加入 AppHub 软件库
+title: "[上架] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交！请先阅读 [SUBMIT.md](../blob/main/SUBMIT.md)。
+        核心要求：软件在你自己的仓库发 Release，**资产文件名固定不变**。
+  - type: input
+    id: name
+    attributes:
+      label: 应用名称
+      placeholder: 例如：超好用播放器
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: GitHub 仓库
+      description: 格式：用户名/仓库名（必须已发布 Release）
+      placeholder: your-name/my-app
+    validations:
+      required: true
+  - type: input
+    id: asset
+    attributes:
+      label: Release 资产文件名
+      description: 固定不变的文件名，如 app-release.apk
+      placeholder: app-release.apk
+    validations:
+      required: true
+  - type: input
+    id: desc
+    attributes:
+      label: 一句话简介
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: 标签（用空格分隔）
+      placeholder: 工具 影音
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台
+      options: [android, windows, linux, macos, web]
+  - type: input
+    id: icon
+    attributes:
+      label: 图标链接（可选）
+  - type: input
+    id: sha256
+    attributes:
+      label: 安装包 SHA256（可选但建议提供）
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: 承诺
+      options:
+        - label: 我承诺该软件不包含恶意代码，且我有权分发它
+          required: true
