@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "name": "AppHub 软件库",
+  "updated": "2025-11-22",
+  "_说明": "每个应用指向一个 GitHub 仓库的 Release。上传者必须固定资产文件名（如 app-release.apk），客户端通过 /releases/latest/download/文件名 永远下载最新版，本清单无需因版本更新而改动。",
+  "apps": [
+    {
+      "id": "demo.hello",
+      "name": "Hello Demo（示例条目）",
+      "author": "your-username",
+      "desc": "这是一个演示条目。把它改成真实应用：repo 填上传者的 GitHub 仓库，asset 填 Release 里固定的文件名。",
+      "repo": "your-username/demo-app",
+      "asset": "app-release.apk",
+      "platform": "android",
+      "tags": ["示例", "工具"],
+      "icon": "",
+      "homepage": ""
+    }
+  ]
+}
