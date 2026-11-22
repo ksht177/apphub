@@ -1,0 +1,19 @@
+name: 校验应用清单
+on:
+  pull_request:
+    paths: ["catalog.json"]
+  push:
+    paths: ["catalog.json"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 校验 catalog.json 格式
+        run: python scripts/validate.py
+      - name: 探测下载链接可达性（警告级，不阻断）
+        run: python scripts/validate.py --check-urls || true
